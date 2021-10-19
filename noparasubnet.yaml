@@ -1,7 +1,15 @@
-pool:
-  name: Default
-steps:
-- task: AzureResourceManagerTemplateDeployment@3
+parameters:
+- name: newsubnet
+  type: string
+
+trigger: none
+
+jobs:
+- job: build
+  displayName: build
+  steps:
+  - script: echo building $(Build.BuildNumber) with ${{ parameters.newsubnet }}
+  - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'ARM Template deployment example: Resource Group scope'
   inputs:
     azureResourceManagerConnection: demoSC
