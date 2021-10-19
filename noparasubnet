@@ -1,0 +1,12 @@
+pool:
+  name: Default
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'ARM Template deployment example: Resource Group scope'
+  inputs:
+    azureResourceManagerConnection: demoSC
+    subscriptionId: 'd66af87f-6456-4537-9389-f23d8e64f39e'
+    resourceGroupName: rgCLI
+    location: 'East US'
+    templateLocation: 'Linked artifact' 
+    csmFile: subnetexample.json
