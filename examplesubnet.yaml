@@ -10,4 +10,4 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact' 
     csmFile: subnetexample.json
-    overrideParameters: -name VnetARM -location East US -resourceGroup rgCLI -addressPrefix 10.1.0.0/16 -subnetName mysubnet4 -subnetAddressPrefix 10.1.0.0/24 -enableDdosProtection false
+    overrideParameters: -name VnetARM -resourceGroup rgCLI -location East US -addressPrefix 10.1.0.0/16 -subnetName mysubnet4 -subnetAddressPrefix 10.1.0.0/24 -enableDdosProtection false
